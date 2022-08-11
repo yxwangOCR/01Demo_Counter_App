@@ -6,10 +6,9 @@ import {useSelector, useDispatch} from 'react-redux'
 
 
 function App() {
-  
   //Provide a callback function with "state" inside
   //We have coounter property in state
-const counter = useSelector((state)=>state.counter)
+const counter = useSelector((state)=>state.counter) // callback function
 const dispatch = useDispatch()
 const increment =()=>{
   dispatch({type: "INCREMENT"})
@@ -17,12 +16,10 @@ const increment =()=>{
 const decrement =()=>{
   dispatch({type: "DECREMENT"})
 };
-
-const addByTen = ()=>{
+const add = ()=>{
   dispatch({type: "ADD", payload: 10})
 }
-
-const subtractByTen =()=>{
+const subtract =()=>{
   dispatch({type:"SUB", payload: 10})
 }
   return (
@@ -30,10 +27,10 @@ const subtractByTen =()=>{
       <h1>Counter App</h1>
       <h2>{counter}</h2>
       <div className='buttons'>
-      <button onClick={addByTen}>+ 10</button>
+      <button onClick={add}> + 10</button>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>   
-      <button onClick={subtractByTen}>- 10</button>
+      <button onClick={subtract}> - 10 </button>
       </div>
     </div>
   );
