@@ -31,10 +31,15 @@ const reducerFunction = (state ={counter:0}, action) =>{
 return state; // return the main "state"
 }
 
-const store = createStore(reducerFunction) // createStore need a reducer to be created and used
+const store = createStore(reducerFunction) 
+// *** How to create store? ***
+// createStore need a reducer to be created and used
 export default store
 
+
 // Export "store" for whole App components access
+
+// *** How to use store? ***
 // For using the store, we need to go to the root file: index.js, 
 // then "Provide" the store for whole APP,
 // so that all components will have access to store
