@@ -27,6 +27,11 @@ const reducerFunction = (state = { counter: 0 }, action) => {
   if (action.type === "SUB") {
     return { counter: state.counter - action.payload };
   }
+
+  if (action.type === "RESET") {
+    return { counter: 0 };
+  }
+  return { counter: 0 };
   return state; // return the main "state"
 };
 

@@ -21,6 +21,9 @@ function App() {
   const subtract = () => {
     dispatch({ type: "SUB", payload: 10 });
   };
+  const reset = () => {
+    dispatch({ type: "RESET" });
+  };
   return (
     <div className='App'>
       <h1>Counter App</h1>
@@ -31,6 +34,9 @@ function App() {
         <button onClick={decrement}>Decrement</button>
         <button onClick={subtract}> - 10 </button>
       </div>
+      <button className='reset-button' onClick={reset}>
+        Reset
+      </button>
     </div>
   );
 }

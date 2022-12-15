@@ -34,3 +34,26 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+.App .buttons button:hover {
+  background-color: #1d3557;
+  color: #f1faee;
+}
+
+.reset-button {
+  background-color: #e63946;
+  color: #f1faee;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  margin: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: rgba(115, 113, 113, 0.8);
+}
+
+.reset-button:hover {
+  background-color: #f1faee;
+  color: #e63946;
+}
